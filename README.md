@@ -56,3 +56,11 @@ Eğer bir nodedan sadece kazanan nodelara gidiş varsa o node kaybeden nodedur.
 Üstteki durumlara uymayan nodelar beraberlik nodelarıdır.
 Bu şekilde bütün graph’ı O(M) zaman karmaşıklığında tarayarak her node’un durumunu bulabiliriz. O(N) değil, O(M); çünkü bir node’un durumunu belirlemek için o node’dan çıkan bütün edge’lere bakmamız gerekiyor, graph’ta da toplam M tane edge var.
 
+
+#Cabtech
+
+Bu soruyu verimli bir algoritmayla çözebilmek için dinamik programlamaya hakim olmak gerekiyor(https://en.wikipedia.org/wiki/Dynamic_programming). Dinamik dizimizdeki duru şu şekilde olacak:
+
+dn[i][k] -> ilk toplantısına i. katta ya da daha aşağıda katılmış ve ikinci toplantısına i. katta veya daha yukarıda girmesi gereken k tane kişi olduğu durumda bu kişileri kaç farklı şekilde yerleştirebildiğimiz. 
+Her durum için odanın sınırını da aşmayacak şekilde her türlü yerleşimi düşünmemiz lazım. Bu yerleşimleri her kat için uygulamalıyız. Bu hesaplamaları yaparken hangi grupları hangi odalara yerleştirdiğimizin de kombinasyon hesabını umutmamalıyız. Bu soru için yazılmış çözüm kodunu inceleyebilirsiniz.
+
