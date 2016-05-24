@@ -46,3 +46,13 @@ Aynı şekilde yeni bulduğunuz node’a en uzak olan node’u da bulduğunuzda 
 
 Bu şekilde toplam O(N) zaman karmaşıklığında soruyu çözebilriz.
 
+
+#Çift Oyunu
+
+Dışarıya doğru edge’i olmayan nodelardayken oyunun kesinlikle galibi olmadığını görebiliriz. Her node için özel bazı özellikleri göz önünde bulundurmamız gerekiyor:
+Oyunu Rzgi’nin kazandığı durumları bulmaya çalıştığımız için tamamen Rzgi’nin gözünden bakacağız. Kesin olarak bildiğimiz durum 1 numaralı node’dan oyun başlandığığnda Rzgi kaybediyor. Yani 1 numaralı node kaybeden node’dur.
+Eğer bir K node’undan kaybeden nodelardan herhangi birine bağlantı varsa K node’u kazanan nodedur.
+Eğer bir nodedan sadece kazanan nodelara gidiş varsa o node kaybeden nodedur.
+Üstteki durumlara uymayan nodelar beraberlik nodelarıdır.
+Bu şekilde bütün graph’ı O(M) zaman karmaşıklığında tarayarak her node’un durumunu bulabiliriz. O(N) değil, O(M); çünkü bir node’un durumunu belirlemek için o node’dan çıkan bütün edge’lere bakmamız gerekiyor, graph’ta da toplam M tane edge var.
+
