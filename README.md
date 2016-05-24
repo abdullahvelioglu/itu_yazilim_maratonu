@@ -39,3 +39,10 @@ dn[b]^dn[a-1]
 Burada ar[1]..ar[a-1]’e kadar olan elemanları iki kez xor işlemine soktuğumuz için bu elemanlar birbirlerini 0’layacak ve elimizde ar[a]’dan ar[b]’ye kadar olan elemanların xor işlemine göre sonucu kalmış olacak. Bu şekilde soruyu O(N+M) zaman karmalıklığında çözebiliriz.
 
 
+#Merdopolis
+Bir ağaçta birbirine en uzak konumlarda bulunan iki node şu şekilde bulunabilir:
+Herhangi bir node’a en uzak olan node’u bul. Bunu birçok gezinme algoritmasıyla O(N) zaman karmaşıklığında bulabilirsini.
+Aynı şekilde yeni bulduğunuz node’a en uzak olan node’u da bulduğunuzda cevabı elde etmiş olursunuz.
+
+Bu şekilde toplam O(N) zaman karmaşıklığında soruyu çözebilriz.
+
